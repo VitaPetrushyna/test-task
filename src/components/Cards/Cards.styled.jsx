@@ -25,13 +25,13 @@ export const PictureSigns = styled.img``;
 
 export const Line = styled.img`
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 0;
 `;
 
 export const AvatarPhoto = styled.img`
   position: absolute;
-  top: 42%;
+  top: 38%;
   left: 38%;
 
   z-index: 1;

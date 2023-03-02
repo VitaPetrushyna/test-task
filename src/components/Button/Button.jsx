@@ -1,9 +1,16 @@
 import { Btn } from './Button.styled';
 
-const Button = () => {
+const Button = ({ countFollower }) => {
   return (
     <>
-      <Btn>Follow</Btn>
+      <Btn
+        type="button"
+        onClick={() => {
+          countFollower();
+        }}
+      >
+        FOLLOW
+      </Btn>
     </>
   );
 };
