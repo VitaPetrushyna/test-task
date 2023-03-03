@@ -17,27 +17,26 @@ import Avatar from '../../img/boy-photo.png';
 import Rectangle from '../../img/Rectangle1.png';
 import Logo from '../../img/Logo1.png';
 
-// import { ReactComponent as Logo } from '../../img/Logo.svg';
-// import { ReactComponent as Rectangle } from '../../img/Rectangle.svg';
-
 const Cards = () => {
+  const number = 100500;
+  const result = (number / 1000).toFixed(3);
+
+  console.log(result);
+
   const [follower, setFollower] = useState(() => {
-    return JSON.parse(localStorage.getItem('follower')) ?? 100500;
+    return JSON.parse(localStorage.getItem('follower')) ?? result;
   });
 
   useEffect(() => {
     localStorage.setItem('follower', JSON.stringify(follower));
   }, [follower]);
 
-  // const [follower, setFollower] = useState(100500);
-  const [tweet, setTweet] = useState(777);
-
   const countFollower = () => {
-    setFollower(state => state + 1);
+    setFollower(state => parseFloat(state) + 0.001);
   };
 
   const reducesFollower = () => {
-    setFollower(state => state - 1);
+    setFollower(result);
   };
 
   return (
@@ -47,8 +46,8 @@ const Cards = () => {
         <PictureSigns src={Picture} alt="signs"></PictureSigns>
         <Line src={Rectangle} alt="rectangle"></Line>
         <AvatarPhoto src={Avatar} alt="avatar"></AvatarPhoto>
-        <Statistics follower={follower} tweet={tweet} />
-        {follower > 100500 ? (
+        <Statistics follower={follower} />
+        {follower > result ? (
           <ButtonActive reducesFollower={reducesFollower} />
         ) : (
           <Button countFollower={countFollower} />
