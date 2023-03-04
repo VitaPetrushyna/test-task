@@ -21,8 +21,6 @@ const Cards = () => {
   const number = 100500;
   const result = (number / 1000).toFixed(3);
 
-  console.log(result);
-
   const [follower, setFollower] = useState(() => {
     return JSON.parse(localStorage.getItem('follower')) ?? result;
   });
