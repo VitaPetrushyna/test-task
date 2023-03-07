@@ -21,6 +21,13 @@ export const Btn = styled.button`
   font-size: 18px;
   line-height: 22px;
   color: #373737;
+
+  &:hover,
+  &:focus {
+    background-color: #a572da;
+    color: white;
+  }
+  cursor: pointer;
 `;
 
 export const BtnActive = styled.button`
@@ -44,4 +51,10 @@ export const BtnActive = styled.button`
   font-size: 18px;
   line-height: 22px;
   color: #373737;
+
+  &:hover,
+  &:focus {
+    background-color: #2a936d;
+    color: white;
+  }
 `;

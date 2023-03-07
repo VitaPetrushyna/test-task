@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import picture from '../../img/picture1.png';
+
 export const Card = styled.div`
   display: flex;
   flex-direction: column;
@@ -21,7 +23,15 @@ export const Card = styled.div`
   border-radius: 20px;
 `;
 
-export const PictureSigns = styled.img``;
+export const PictureSigns = styled.div`
+  width: 308px;
+  height: 168px;
+
+  background: url(${picture});
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top left;
+`;
 
 export const Line = styled.img`
   position: absolute;

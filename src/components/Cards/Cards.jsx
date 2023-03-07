@@ -12,7 +12,6 @@ import Button from '../Button/Button';
 import ButtonActive from '../Button/ButtonActive';
 import Statistics from '../Statistics/Statistics';
 
-import Picture from '../../img/picture1.png';
 import Avatar from '../../img/boy-photo.png';
 import Rectangle from '../../img/Rectangle1.png';
 import Logo from '../../img/Logo1.png';
@@ -41,7 +40,9 @@ const Cards = () => {
     <>
       <Card>
         <LogoIcon src={Logo} alt="logo"></LogoIcon>
-        <PictureSigns src={Picture} alt="signs"></PictureSigns>
+
+        <PictureSigns></PictureSigns>
+
         <Line src={Rectangle} alt="rectangle"></Line>
         <AvatarPhoto src={Avatar} alt="avatar"></AvatarPhoto>
         <Statistics follower={follower} />
